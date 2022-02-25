@@ -33,12 +33,9 @@ try {
   const userWidth = Number(widthInput)
 
   // Process
-  if (isNaN(userLength) == true) { 
+  if (isNaN(userLength) == true || isNaN(userWidth) == true) {
     // Output if errors are detected
-    console.log("ERROR: Invalid length");
-  } else if (isNaN(userWidth) == true) {
-      console.log("ERROR: Invalid Width ")
-
+    console.log("ERROR: Invalid Input");
   } else {
     const heightOfBoard = findBoardFoot(userLength, userWidth);
     // Output if no errors detected
@@ -49,3 +46,4 @@ try {
 } catch (err) {
   console.log("ERROR: Invalid Input");
 }
+
